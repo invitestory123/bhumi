@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Hero } from "@/components/wedding/Hero";
 import { Countdown } from "@/components/wedding/Countdown";
 import { Family } from "@/components/wedding/Family";
-import { Story } from "@/components/wedding/Story";
+import { BackgroundMusic } from "@/components/wedding/BackgroundMusic";
 import { Details } from "@/components/wedding/Details";
 import { Venue } from "@/components/wedding/Venue";
 import { Gallery } from "@/components/wedding/Gallery";
@@ -72,12 +72,12 @@ function InvitationPage() {
         <Hero />
         <Countdown />
         <Family />
-        <Story />
         <Details />
         <Venue />
         <Gallery />
         <Blessing />
         <SiteFooter />
+        <BackgroundMusic />
         <Toaster position="top-center" />
       </main>
     </OpenGate>

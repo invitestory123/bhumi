@@ -60,6 +60,8 @@
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Karla", system-ui, sans-serif;
+  --font-script: "Great Vibes", "Alex Brush", cursive;
+  --font-devanagari: "Rozha One", "Noto Serif Devanagari", serif;
 }
 
 :root {
@@ -148,6 +150,14 @@
 /* Scalloped mughal arch silhouette */
 @utility mehrab {
   border-radius: 48% 48% 6px 6px / 34% 34% 4px 4px;
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+}
+
+@utility font-devanagari {
+  font-family: var(--font-devanagari);
 }
 
 @utility paper-grain {

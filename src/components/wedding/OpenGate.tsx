@@ -139,12 +139,15 @@ function Opener({ opened, onOpen }: { opened: boolean; onOpen: () => void }) {
 
         <motion.button
           type="button"
-          onClick={onOpen}
+          onClick={() => {
+            onOpen();
+            window.dispatchEvent(new CustomEvent("start-wedding-bgm"));
+          }}
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
           whileTap={{ scale: 0.96 }}
-          className="group relative mt-12 overflow-hidden rounded-full border border-gold/70 px-9 py-3.5 text-[0.62rem] tracking-[0.35em] text-parchment uppercase transition-colors hover:bg-gold/15"
+          className="group relative mt-12 overflow-hidden rounded-full border border-gold/70 px-9 py-3.5 text-[0.62rem] tracking-[0.35em] text-parchment uppercase transition-colors hover:bg-gold/15 cursor-pointer"
         >
           <motion.span
             animate={{ x: ["-120%", "120%"] }}
