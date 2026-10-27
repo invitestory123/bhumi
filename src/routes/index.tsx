@@ -8,6 +8,7 @@ import { Details } from "@/components/wedding/Details";
 import { Venue } from "@/components/wedding/Venue";
 import { Gallery } from "@/components/wedding/Gallery";
 import { Blessing } from "@/components/wedding/Blessing";
+import { Rsvp } from "@/components/wedding/Rsvp";
 import { SiteFooter } from "@/components/wedding/SiteFooter";
 import { Petals } from "@/components/wedding/Petals";
 import { ScrollProgress } from "@/components/wedding/ScrollProgress";
@@ -76,6 +77,7 @@ function InvitationPage() {
         <Venue />
         <Gallery />
         <Blessing />
+        <Rsvp />
         <SiteFooter />
         <BackgroundMusic />
         <Toaster position="top-center" />

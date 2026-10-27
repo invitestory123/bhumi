@@ -87,6 +87,24 @@ export const invitation = {
       "Two families, one thread of gold — and a lifetime of happiness made luminous together.",
     source: "A blessing from both families",
   },
+  rsvp: {
+    title: "RSVP",
+    subtitle: "We look forward to celebrating with you. For any queries or assistance, please reach out to:",
+    contacts: [
+      {
+        name: "Ajay Nagar",
+        phone: "98110 68888",
+        tel: "+919811068888",
+        whatsapp: "919811068888",
+      },
+      {
+        name: "Sandeep Poswal",
+        phone: "97566 00111",
+        tel: "+919756600111",
+        whatsapp: "919756600111",
+      },
+    ],
+  },
   footer: {
     families: "With love & warm wishes from both the families",
     contacts: [],
