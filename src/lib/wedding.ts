@@ -21,7 +21,7 @@ export function buildICS() {
     `DTEND:${toICSDate(event.endsAt)}`,
     `SUMMARY:${event.title}`,
     `LOCATION:${venue.name}, ${venue.address}`,
-    `DESCRIPTION:${invitation.invite.line}`,
+    `DESCRIPTION:${invitation.invite.line || event.title}`,
     "END:VEVENT",
     "END:VCALENDAR",
   ];
@@ -39,7 +39,16 @@ export function downloadICS() {
 }
 
 export function googleCalendarUrl() {
-  const details = `${invitation.invite.kicker} — ${invitation.invite.line}\n\nVenue: ${venue.name}, ${venue.address}\nDress code: ${event.dressCode}\nNote: ${event.note}`;
+  const intro =
+    [invitation.invite.kicker, invitation.invite.line].filter(Boolean).join(" — ") || event.title;
+  const parts = [
+    intro,
+    `Venue: ${venue.name}, ${venue.address}`,
+    event.lunch ? `Lunch: ${event.lunch}` : "",
+    `Dress code: ${event.dressCode}`,
+    event.note ? `Note: ${event.note}` : "",
+  ].filter(Boolean);
+  const details = parts.join("\n\n");
   const params = new URLSearchParams({
     action: "TEMPLATE",
     text: event.title,

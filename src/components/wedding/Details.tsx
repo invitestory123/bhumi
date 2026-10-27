@@ -1,4 +1,4 @@
-import { CalendarPlus, Clock, MapPin, Shirt } from "lucide-react";
+import { CalendarPlus, Clock, MapPin, Shirt, Utensils } from "lucide-react";
 import jaali from "@/assets/jaali.jpg";
 import { invitation } from "@/config/invitation";
 import { directionsUrl, googleCalendarUrl } from "@/lib/wedding";
@@ -28,24 +28,30 @@ export function Details() {
 
           <ul className="mt-7 space-y-4 text-sm text-ink/80">
             <li className="flex items-center justify-center gap-2">
-              <Clock className="size-4 text-gold" aria-hidden />
-              {event.dayLabel}, {event.timeLabel}
+              <Clock className="size-4 text-gold shrink-0" aria-hidden />
+              <span>{event.dayLabel}, {event.timeLabel}</span>
             </li>
             <li className="flex items-center justify-center gap-2">
-              <MapPin className="size-4 text-gold" aria-hidden />
+              <Utensils className="size-4 text-gold shrink-0" aria-hidden />
+              <span>{event.lunch}</span>
+            </li>
+            <li className="flex items-center justify-center gap-2">
+              <MapPin className="size-4 text-gold shrink-0" aria-hidden />
               <span>
                 {venue.name}
                 <br />
                 <span className="text-ink/60">{venue.address}</span>
               </span>
             </li>
-            <li className="flex items-center justify-center gap-2">
-              <Shirt className="size-4 text-gold" aria-hidden />
-              {event.dressCode}
+            <li className="flex items-center justify-center gap-2 text-center">
+              <Shirt className="size-4 text-gold shrink-0" aria-hidden />
+              <span>{event.dressCode}</span>
             </li>
           </ul>
 
-          <p className="mt-6 font-display text-lg italic text-ink/65">{event.note}</p>
+          {event.note ? (
+            <p className="mt-6 font-display text-lg italic text-ink/65">{event.note}</p>
+          ) : null}
 
           <div className="mt-8 flex flex-col gap-3">
             <a

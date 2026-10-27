@@ -187,8 +187,8 @@ box_x = center_x - box_w // 2
 draw.rounded_rectangle([box_x, date_y, box_x + box_w, date_y + box_h], radius=18, fill=CREAM_BG[:3], outline=GOLD_LIGHT[:3], width=1)
 
 # Date Inside Box
-w_date = draw.textlength("Thursday, 26 November 2026", font=f_date)
-draw.text((center_x - w_date / 2, date_y + 14), "Thursday, 26 November 2026", font=f_date, fill=PINE_DARK[:3])
+w_date = draw.textlength("Wednesday, 25 November 2026", font=f_date)
+draw.text((center_x - w_date / 2, date_y + 14), "Wednesday, 25 November 2026", font=f_date, fill=PINE_DARK[:3])
 
 # Time Inside Box
 draw_spaced_text(draw, "12:00 PM ONWARDS", date_y + 58, f_time, GOLD_DARK[:3], spacing=3)

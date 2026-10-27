@@ -12,7 +12,7 @@ export function Hero() {
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
   const fade = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  const { couple, invite, event, venue } = invitation;
+  const { couple, event, venue } = invitation;
   const opened = useOpened();
 
   return (
@@ -40,19 +40,10 @@ export function Hero() {
         style={{ y: textY }}
         className="relative z-20 mt-auto w-full px-6 pt-24 pb-8 text-center"
       >
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={opened ? { opacity: 1, y: 0 } : false}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-[0.7rem] tracking-[0.42em] text-ink/70 uppercase"
-        >
-          {invite.kicker}
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 24, letterSpacing: "0.4em" }}
           animate={opened ? { opacity: 1, y: 0, letterSpacing: "0.16em" } : false}
-          transition={{ duration: 1.4, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mx-auto mt-4 max-w-md text-4xl leading-tight font-light text-pine uppercase sm:text-5xl"
         >
           {couple.brideShort}
@@ -65,24 +56,15 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, scaleX: 0.4 }}
           animate={opened ? { opacity: 1, scaleX: 1 } : false}
-          transition={{ duration: 1.2, delay: 0.8 }}
+          transition={{ duration: 1.2, delay: 0.6 }}
           className="mx-auto mt-6 w-52 gold-rule"
         />
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1 }}
-          className="mt-6 text-sm text-ink/80"
-        >
-          {invite.line}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1.15 }}
-          className="mt-3 font-display text-3xl tracking-[0.18em] text-gold"
+          transition={{ duration: 1, delay: 0.8 }}
+          className="mt-6 font-display text-3xl tracking-[0.18em] text-gold"
         >
           {event.dateLabel}
         </motion.p>
@@ -90,7 +72,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={opened ? { opacity: 1 } : false}
-          transition={{ duration: 1, delay: 1.3 }}
+          transition={{ duration: 1, delay: 1 }}
           className="mt-2 text-[0.72rem] tracking-[0.28em] text-ink/70 uppercase"
         >
           {venue.name}

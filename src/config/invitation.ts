@@ -31,8 +31,8 @@ export const invitation = {
     groomLineage: "(S/o Mr. Harish Kasana & Madhu Kasana)",
   },
   invite: {
-    kicker: "With the blessings of Grandparents",
-    line: "Deepanjali Nagar & Vijay Nagar request the pleasure of your company on the auspicious occasion of the Wedding Festivities of their daughter Bhumika with Piyush",
+    kicker: "",
+    line: "",
   },
   family: {
     grandparents: "Late Smt. Kusum Lata & Late Sh. Satyapal Poswal",
@@ -44,13 +44,14 @@ export const invitation = {
     title: "The Wedding of Bhumika & Piyush",
     type: "Wedding Ceremony",
     /** ISO with timezone offset — India Standard Time */
-    startsAt: "2026-11-26T12:00:00+05:30",
-    endsAt: "2026-11-26T22:00:00+05:30",
-    dateLabel: "26 . 11 . 2026",
-    dayLabel: "Thursday",
+    startsAt: "2026-11-25T12:00:00+05:30",
+    endsAt: "2026-11-25T22:00:00+05:30",
+    dateLabel: "25 . 11 . 2026",
+    dayLabel: "Wednesday",
     timeLabel: "12:00 PM onwards",
-    dressCode: "Traditional / Festive Indian Wedding Attire",
-    note: "Lunch and celebrations to follow",
+    lunch: "Lunch 12 PM onwards",
+    dressCode: "soft pastels & blush pinks/Festive Indian Attire",
+    note: "",
   },
   venue: {
     name: "Jaypee Residency Manor",
@@ -87,13 +88,13 @@ export const invitation = {
     source: "A blessing from both families",
   },
   footer: {
-    families: "With love & warm wishes from the Poswal, Kasana & Nagar Families",
+    families: "With love & warm wishes from both the families",
     contacts: [],
   },
   meta: {
     title: "Bhumika & Piyush — Wedding Invitation",
     description:
-      "Together with their families, Bhumika and Piyush cordially invite you to celebrate their wedding ceremony on Thursday, 26 November 2026 at Jaypee Residency Manor, Mussoorie, Uttarakhand.",
+      "Together with their families, Bhumika and Piyush cordially invite you to celebrate their wedding ceremony on Wednesday, 25 November 2026 at Jaypee Residency Manor, Mussoorie, Uttarakhand.",
     url: "https://bhumi-invitestory.vercel.app",
     image: "/og-image.png",
     siteName: "Bhumika & Piyush Wedding",
